@@ -26,3 +26,4 @@ Neste mini projeto, você terá a oportunidade de explorar os recursos do Tailwi
 Confira estes exemplos para se inspirar na implementação do Toggle de Dark Mode:
   - [Site do Josh Comeau](https://www.joshwcomeau.com/)
   - [Site do Codante](https://codante.io)
+  - [O toggle mais satisfatório do mundo](https://svarden.se/post/the-worlds-most-satisfying-toggle?utm_source=stefanjudis)
