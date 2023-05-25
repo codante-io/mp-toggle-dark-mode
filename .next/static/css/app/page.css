@@ -1,0 +1,984 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!./src/app/globals.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.absolute {
+  position: absolute;
+}
+.inset-0 {
+  inset: 0px;
+}
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.m-0 {
+  margin: 0px;
+}
+.m-1 {
+  margin: 0.25rem;
+}
+.m-2 {
+  margin: 0.5rem;
+}
+.m-5 {
+  margin: 1.25rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}
+.mr-5 {
+  margin-right: 1.25rem;
+}
+.mr-6 {
+  margin-right: 1.5rem;
+}
+.flex {
+  display: flex;
+}
+.h-0 {
+  height: 0px;
+}
+.h-0\.5 {
+  height: 0.125rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-20 {
+  height: 5rem;
+}
+.h-4\/6 {
+  height: 66.666667%;
+}
+.h-full {
+  height: 100%;
+}
+.w-0 {
+  width: 0px;
+}
+.w-0\.5 {
+  width: 0.125rem;
+}
+.w-1\/6 {
+  width: 16.666667%;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.w-10\/12 {
+  width: 83.333333%;
+}
+.w-12 {
+  width: 3rem;
+}
+.w-20 {
+  width: 5rem;
+}
+.w-52 {
+  width: 13rem;
+}
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.self-start {
+  align-self: flex-start;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.border {
+  border-width: 1px;
+}
+.border-l-0 {
+  border-left-width: 0px;
+}
+.border-r-0 {
+  border-right-width: 0px;
+}
+.border-t-0 {
+  border-top-width: 0px;
+}
+.border-yellow-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
+}
+.from-stone-500 {
+  --tw-gradient-from: #78716c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(120 113 108 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: end;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.italic {
+  font-style: italic;
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+.text-yellow-500 {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+.underline {
+  text-decoration-line: underline;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-offset-up {
+  --tw-shadow: 0 -1px 15px rgba(0, 0, 0, 0.5);
+  --tw-shadow-colored: 0 -1px 15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-green-500 {
+  --tw-shadow-color: #22c55e;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-red-500 {
+  --tw-shadow-color: #ef4444;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+:root {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-planet1 {
+  background-image: url('https://jkhub.org/wiki/images/0/01/Tatooine.png');
+}
+
+@keyframes reappear {
+  0% {
+    width: 0;
+    background-color: transparent;
+  }
+  50% {
+    width: 44px;
+    background-color: transparent;
+  }
+  100% {
+    width: 44px;
+    background-color: red;
+  }
+}
+
+.animate-bar-red {
+  animation-name: reappear;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+  0% {
+    width: 208px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 208px;
+  }
+}
+
+.light-up {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.light-shrink {
+  animation-name: shrink;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.bg-planet2 {
+  background-image: url('https://p1.hiclipart.com/preview/888/522/323/png-planets-of-star-wars-kashyyyk-icon-png-icon.jpg');
+}
+
+.bg-planet3 {
+  background-image: url('https://zam.zamimg.com/images/9/a/9afca49f83018cbbe49a3ff709e2b31f.png')
+}
+
+.bg-planet4 {
+  background-image: url('https://w7.pngwing.com/pngs/693/703/png-transparent-palpatine-anakin-skywalker-mustafar-planet-earth-planet-miscellaneous-sphere-astronomical-object-thumbnail.png');
+}
+
+.bg-planet5 {
+  background-image: url('https://media.moddb.com/cache/images/members/5/4393/4392986/thumb_620x2000/Coruscant_Icon_6.png');
+}
+
+.bg-planet6 {
+  background-image: url('https://p1.hiclipart.com/preview/851/355/634/png-planets-of-star-wars-dagobah-icon-png-icon-thumbnail.jpg')
+}
+
+.bg-planet7 {
+  background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGRgaGiIaHBsaGhskGxsaGRsbGhsYGyIcIC0lIh03JCAbJjclKS4wNDQ1ICM5PzkyPi0yNDABCwsLEA8QHRISHTIpIykyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAOAA4AMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAADBAIFAAYHAQj/xABFEAABAgUCAwYDBgUDAQYHAAABAhEAAyExQQQSIlFxBRNhgZHBBqHwIzJCYrHRBzNScuEUkvGyQ2NzgqKzFRYkU5Ojwv/EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAIBEBAQACAgMBAQEBAAAAAAAAAAECERIhMUFRA2EiE//aAAwDAQACEQMRAD8A61OmpWkpSXJsGOC+Yhp+B99HtmzvbqIzuNnG7thmvT3jP5v5dvm7+nKABzpSlqKkhwbGmA2YPOnJWkpSXJsGOC+Yh3+zgZ2y7Xr7xncbON3bDNenvAGafgffR7Zs726wOdKUtRUkODY0wGzBP5v5dvm7+nKM7/ZwM7Zdr194AnNnJWkpSXJsGOC+Yhp+B99HtmzvbqIzuNnG7thmvT3jP5v5dvm7+nKABzpSlqKkhwbGmA2YPOnJWkpSXJsGOC+YDN1aZKSFMEpqVKUEgA1ck0ArzjSu0/4i6OQr7Eq1Kx/QNqHbK1XHikKh6DeNPwPvo9s2d7dYHOlKUoqSHBsaYDZjkPaX8RdbP+4JchONqd6w9+JbpP8AtEUWp7U1E2kyfNWP6TMVt/2At6CHxLbvmt7RlBJSqYhJ/OoJsfzNFfp/iDRoKgrVSA7f9qg2fkY4YiWlNAkDyh5CGGBzh8YW3YZvbelUolOpkF/+9l8gMqi0OvlTUlMuYhZNglQOQY4pJQDZoaTpQbgHqIOMLlXZNPwPuo9s2d7QOdKUpRUkODY0wGzHLtMubL+5NWgDCVqA9HaLrRfFOqlgAlExPJSQD0BQ3zBg4Dk36bOStJSkuTYMcF8xDT8D76PbNne3URrPZ3xXJcGYFS1cjVD2+8KjzSBGxy5iZ4CkqDCxBCgX5EdImyxUsrydKUtRUkODY0wGzB505K0lKS5NgxwXzEO/2cDO2Xa9feM7jZxu7YZr094Rs0/A++j2zZ3t1gc6UpaipIcGxpgNmCfzfy7fN39OUZ3+zgZ2y7Xr7wBObOStJSkuTYMcF8xDT8D76PbNne3URncbON3bDNenvGfzfy7fN39OUADnSlLUVJDg2NMBswedOStJSkuTYMcF8xDv9nAztl2vX3jO42cbu2Ga9PeAByZqlqCVFwbimA+IJqfs22Ud3zZmv1ic6alSSlJcmwrgvmIabgffR7Zs726iAJyZKVpClByblzgtiASZqlKCVFwbimA+IydKUtRUkODY0wGzB505K0lKS5NgxwXzAENRwNso982Zr9TE5MpKkhSg5NzXBbEQ032b76OzZs726xV9vdqStPLVqJywiXYE3UWbalNyqhp7VgB+XPKiyjw3NhYE3HSNF+J/4lyZBMvQhM5dlLc90k4Y3mdEkD82I0X4w+OZ+vJQHlad6SwarAsZhF/7RwjxvGspTFTH6W1l2t2vqNYvfqZqll3CTRCf7UDhHJ2fmTAUS4hIRzh6VKigAiUpXgIstNpQBHiVpSLv4CPUawf0kQatTuQ1JlAFv2hpUp6QivVqABGTEmmKG/cSGokC5B+qw5jU3IzKlKFlPXzg/EirnoYrpWqUaqIB6UHjFmic9CXp6xXGp5QSXq9xZTjpDqUBnBp+sIrkooQWo7H0g2mCqMSfSDUG/pg6dzUQxolTJR3SlqQrLGh/uBofMRJCxYqS+Q+IxcxlNsPgx9oD6bJ2Z8SJUdupRtUf+0S+w/3D8PWo5kRf6ecVkAq3JVWjMQzggjyjQ+7FoY0XaEyQ6U8SCayyaXd0n8J+RyMxFw34VMvredRwNso982Zr9TE5MpKkhSg5NzXBbEI9j9oS1pK0qoWDfiSQ7hQFj+uHg86UpSipIcGxpgNmM2jJM1SlBKi4NxTAfEE1P2bbKO75szX6xOdNSpJSkuTYVwXzENNwPvo9s2d7dRAE5MlK0hSg5Ny5wWxAJM1S1BKi4NxTAfEZOlKWoqSHBsaYDZg86alaSlJcmwY4L5gCHcbON3bDNenvGfzfy7fN39OUDkzVLUEqLg3FMB8QTUcDbKPfNma/WAM7/ZwM7Zdr194zuNnG7thmvT3icmSlaQpQcm5c4LYis7Q7XRIlLm6hbS0BzZz/AEpDVKiWAGTAAPiX4gk6aSZ04sE0SgVVMUbITatKmwFTHA/iDt6drZveTjRLhEsfclpP4U+PNVz5ADz4m7fma6eZqxtSKS0AulCMJHNRuTk+AAFchMXJotpphuRLiEtEMSTDBmTLAiU2c1PnBJYxmPJ+kKshL+Lkw4m7T0qQshIFMk5LQ2ezav8AhFT+31zg2hlplgJBfnzcxcS0Ug38LjvyoJKN6qCwcJLh/lDHailISlLMCK/tF73aXBN/OK/tmYCgMaF6hm8IqZbsTljqVVBae7AYBTsC1SMvX2xDPZy02N/qsVSUn/MWuj04SkKIBNwSqlOnn6CNMtSMJbas06VKvvGzOB42qYcSWSyU4qP8XIoYCpKRxFlAXSFYNQzBhzbpAdLqOMDbQGiUt6Vv1jK5NPCesIUQctinUUpHspfPrUv6H2jzUSl/hQSl3GWfFPHxg/Z0slSSoUJZjGlsmLPu05ppgcDGL2h5cuAq0wQrcBS78vqsPpTuFIz23x/qtSVyl95LLH5KH9KhkfQjcuye2UzEDamo+8kmqSa8qjkc+BcDWNRKLBmvUcxyiqTrlyZoUhNixBNFJN0lvoGHceUPlp0ruNnG7thmvT3jz+b+Xb5u/pyhXsztAahKVAulVwWBBFSktkGG9RwNso982Zr9Yxs01l2zv9nAztl2vX3jO42cbu2Ga9PeJyZKVpClByblzgtiASZxWoJUXBuKYD4hAedNStJSkuTYMcF8xDT8D76PbNne3WM7jZxu7YZr094z+b+Xb5u/pygAc6SpSipIcGxpgNmOHfxS+L/9XqO5lKfTyVMGsuYKKX4gVSnzOY6D/E/4mOi0hkyy02c6EkGqUUMxfgWUEg81PiOApisYVMSkwygQGXDCRSKAqVekTRNbrnyiBQQLRFYow+vnDiLVjI1aSOKnl7X9IsdNPQbE+l4opCG5eYh3TzflyEPiXJsOlkvW55n66enjFuhLCKbsZ9pN3xQH5/r/AJi5q1L45OYVOGEMafWLwDWaVBTY1NSlqPkjIs8R0TpqtyTY/I1LeENTpd+EEAOXLGgp1yKjMHgXuNR1Om2KNDtwoWI9Kc7wSVMdJSQaV8W5j6rSLqYZZUO9JS4Yc+YtYm/L5RXa1ElI3CYVKrQg2w5v9YjWXfVYZY67gMqepIZtyfrzEMo1LvtLFr5B+swfQaVJRVmFSWLABlF/U0Bf5wGYuXcAt/UQBlnANVRFx76R/qdntH2itAAWSAriBNSGsC1AfS/hDKVCZMUAHNw5FWip0c9KmCi4FSk8skUuHJ5esWemUFlmAwFAXfIt6QWfYqZ2yL/SIJRVOGqXcdP84hmQlIomgux8or9NqVhCiojw62IY4zDyXASSQCbHmCHH7QtNpRJ0twRZ/wBRWKfXaWu5nHszj68I2Bdn5QutGcH6/eCXQym1P2Jr1SFkH+WsgLGE5SsdKg+HQRv+m4H3Udmy7Py6iNJ1MpKVOabqeDxe/Dmo7xHcqVWWOE/1INh5M3TbC/Sb7PDrpbTpKlKKkhwbGmA2YPOmpWkpSXJsGOC+Yh3+zgZ2y7Xr7xncbON3bDNenvGTUOTNUtQSouDcUwHxBNQNjbKPfLszX6xOdNSpJSkuTYVwXzGsfHHaitH2fqJn3VrSJcuofcvh3DxAJV5QBxP49+IDrNbMmBTy0fZy+WxFNwb+ourzHKNdQIgBB0CNCMSoaQIVQmHZUqzwB6oG/l9NHqFp3Bix6OPmQf1hpWm3JZ2+Y/SAI0gKnJDOHP6vSHGdPI1KrbUqGSkVA8QQXgksoWav4i3ypAVSe7bicGrsXAhtC6bgX8FGxpYkuBa0UlYSpIxufCSzdIuJMxI4d48yCSQ5IFYpZOsKuBScNRSurMHezcxaPZMwpSKDaAw2gqZ/wncGLs16PE62rax10whBIFGLuhTihZ/0fxrQGFpHai5YO5lJWxDO7G4L4uA9fWE5/aCQg0UCotQcLZZ84t+8KTVFat0wKsBwihFBawNR4P5ReOP1GWXwbXdsTJ1FlIqGDeDenNzmF5k7eaJZrnzpDGkRKSSJr0G4BIqojhYFqB3uzAczDcvtYBDHa6fwql+DDbSly5LktYO8azrxGVm/NFKCiWmXv++ogAqIGH3XaqjTmnLl19coKUAlW4BIDsfwiv7v08YT1mtXNI37SzsQkJuzu17C8T00hSgcDJ+fnDk13SyvqLPspEscSk71Cw3MOrAEuOvlFilzWjxV6FBSeIEbreLY61izQ+BexwOsZZd1KYKj08edqRbnV7ZSQoEvS1A1XHO4oIF2XozMTVgoFiPAhw3jcRms7NWFUDsHo9oJq3S5yk3FtK1oNXS3OvE1D9eIhlABDj7uI1nTTSFc/A5b5xcaPVByX4cvTaa3/eDLHTXDPb3WygpJBH1j5xSdndoKkTErqNqmV/YaKp0r5CLjtDVttKSCD+h/URT6xH4m8faHJ12nLLvp0yTKSpIUqpOXvgWpaASZqlqCVFwbimA+Ip/hyYqbIDVKDsJcfhA23/KU/OL+dNSpJSkuTYMcF8xzWaunTLubQ7jZxu7YZr0945H/ABx7W3nTacUYKmqD5LIQf+uOsSZqlKCVFwbimA+I4B/FjVb+05yRaWES09AgLP8A6lKgnkVp6BWGpcuFpd4bQqLA6EeDxYSmDDyhBM1ofkqp79MwJPSk0v8AXKJGelJbaerBgepaApoEnaFf59Ycl6dSwmm0CrO9cPaHCosjSkneG5lrPzY8/WHxpZSuJaWJLOHFedP1MKnTKEzehLkipJswsM+XhDmn27juUx5UZnxTz+qIg/8A4MBVB4bgGvoQxGOcC15WEFI3Fj1bmOcWipgZkqZ6Av6/LP7QrqJYVUkm70oKPZmcDn5Q4Viq7P1JKhuoAQ6gwL123IuaRbpRtWoJAZQLnaxJLNVyCkh3tfLlq2bLQgEIJKmJO2tm4VM7Coq2TiG+y9UyUo2FNWcUuXZuQ4s1bxIir43ETrpLTaRCFMzU6ejGo84S1+jPeLUmWrbegelHNPFz4Radp6dTOkgkMWG12e3hzxc+ZpKiUjfc0ABsQ1VZavnCxy49ncd9KXszQd4VVYBLjq9ul/lDGidK1S1Wc+o/cCLlCEvRAQWZxTL/AEYSnaU94VC9C9WCgf8ApNekX/0mW5UZYag5lv8Ar+0E04IUzuG5R4hXMEdWbpf5wYREumdh7Razuyqh4s1uHo3vFgvtBa1bgWDWI58/G8V8tBKdt3wLvDSJCgpiFJx1/fEO6VMrrUKmQxBf94PPTutUmpOSb/vB1SxHslkncQ4AfP3hYUg50SK2anawNuXInI5YpD8oIXLYMW9/0MB16NwoGqKfKALUUHcm5wbNWkab5Q5dXtY/B2s7udMRcKSFAPYpLfor5RuPcbON3bDNenvGgdlTANVIWbKVtPjvSUN6kekb3JnKUoJUXBuKYD4jD9Z3tv8Alf8AOh501K0lKS5NgxwXzHy78WzSvXapR/8AvrHklakj5AR9PiRs43dsM16c/GPlfto//Uz/APxV/wDuKicWlKIg4JgCYOmKSMhPnDElZBuYXSqDIWHr/wAQ4TYNBPSsMLjEWSiQlwQPE48fExrui1yEB2r9fXpF7J1KVFgQQQ4PNnBg0NiSNaVAfd3VcV/C5tfp5xKTOC1OQHt4Ur9W87AU6XZaTzKmyG4VDxH14wSsCXvBqFMpsXY/r6QytMKQQdtX51qQ4Bu9WA82iSNWBQvyIJDOA1ckX8LQZEkTA+5CnBTY1IGW86FwaUiY7PUVUILVsRW4bwZukCdVWGWAGCnYOKmjf9ItblBdJJmGZuAAAISmg21ZLtguR6w3N7GVMDCinvXawoxp7esW+h0iZVZrBRL/AHqAhy9LigvZvCDfRTGgzNAdrOmiiHS5cGxoDVi7dPIyxtIBTwBmLGj8NQKilXLtyaLSeUsKhO6gJsXe2Dz8YrpyAguS5wzu/UvT9hE3pomnirh7Zf8AaFVIO44GIxM4gsSCxYtz5jnVvmIOtPE2GcHm9YlOXYCACClhWJ9m6oJdMxDlrKFeYgsqWxyPeK5I3T1EMyQBZh90Jani/pGuF6rHKcV0rUr4SGSAXAAbIpSsOy9eSFBQJU5KVE02qbcg26WyIS0jAgLSGfxLEgjrdj5R7IRxXPg+IRS2HwSRWlGp9X8YAgsWNA9xf2+usWE+RsQkmhV+jO8KBAN4Nq41DUthyKEEhuVxiFZyH+sQxMSWPh483NPQwIqoBkU6jB9vKKl0RNSmKFf0rSfRQ/aOlzpqVJKUlycVwXN45pr1cJ6R0lUjYd7u2Ga9L+cR+t3pv+XtCROKlBKi4OKYD4j5c7fQU6rUJNxOmA+S1CPqmdNSpJSkuTYVwXzHzL8daUy+0dUkhvtVK/8AyMv/APqIxaVSS4MmBSYYCKxSXoj3xjIxIiomjadAJAJ+RZvKLFWrASUob+4UpZhlvOKt4ZloJwTT9IrSVl2Xr9nCQCCM1ZnbIpDSJqN1WAJ+hFXp0B+vO/hT1htchVgLG5t9WhWRNtX2mmKlEBL7TUXYitOT2rekW21IYhRDsR8gCxHjGu6DVUCV+ABPioAVNgK8/RxDnekEizAPSjVLhJIpV2A5DlEK5Nk000KoTVLGgahNLUNsGBT+0gFBgWevOttoFCL8rviKNGobcrewsNqXBFXSHSKO9Ge+HMVnaHae9wmoIYnD1qwplvKKxxt8C56bkrtqWU8Lim5yAa0oQ4rUDl4xWHXhZJ3VKmDJIBOAl6k5PsBGvziWSUUBAl1JZKmZuQs2beMS0yFpUyVqQgM5U1D/AOYMatyxyeHw6Tc27dkaUK37wLsPGgL8xeIAJJY0LkNXFuhZi3jFTpdVxBYVQ0FWwUuGI5+bCHJ8xISG3JU5ficnNSLDw5ERFVuDTE0O5VcP/jELSS1HqKP0o8Z3xUQHKhbxGT5ecerQ375gjPM7/qlKG1RdIO4UA8GoIs9BIso3u/SNe74JZy17dP0hzT9qlNBSjReMtLG99rPtnVqKhWByVzGSdhajljR89OkVeo1SlEjJuPnF0FsnhPDYCHn1IqXdC1Mxi4LHn84F3Z2hXP8Ae0ZqVO1g/s8EnE7Upcli1rMW9KGJh6JaqXVI/qHzU8dClzSpe1RdJelMORasaJqEEz5UtOVoSOgIeOgzpqVJKUlybCuC+Yn9PTX8/aHcbON3bDNenvHB/wCMel29od6AwnS0qNblDyz/AOlKfWO6SZqlKCVFwbimA+I55/HDsgHTSZ6BWWspV/bMCQ/+5KB/5oieV1xSWYYSusKog6ItIrvHsRTEvCHE16mCCIIhlUtmJsb+EaSppjSsEqUVNgDmfbl/xD2mWpfEGpS314QknTuAQ1aAZPi9sj0a4MWWkQJQL3Pt9GJy0nRzSOBRINana6qOAKmnM+XKGp0sJAKqkgVr4Yzn1xCiFuHSQDdnx72iw0mvRMTsWGIF7p6u/SIPRTS6MTFkTCVKBVwl2YE2IL2DvivjEzpJayU7AmgYhJY86P8A8RCfJ7tjQhRd/wAIILMCPK/OIKmMo8dg6XoSk2KX+r8ordZ0HT6ZSytCiVbbPnYGdsDb8ocQpJC0rdiCC3jn9flHkvXUUpqlxSlFCr84UTqAsLSbBNNtKirHmHw2Yfdu0WoGa5QEKICaC7szEsHa1B+8D/1K0qUEqJDkVqCCb/RgEuWrclISSSQnaHckkMOpiQSQojaxchuRBYivRo6JjEW1f9matykfi5YPgP0ix1y1BAAuL/4NXZxWKOTLO4EoFQGAfaSGfxehJZvChpZKKiQ+52D7jU0DH0aOfOYy7i8ctzVERMdQe5UQkFztcvw7jbLm8NSZJL8LFyXcm12Dv9PE5aq7Rdq+7/tDMjWoSve5UQOEB/vOKqYgN96jwclyT2Mjs0pQlTULFwS9S4tQCj836QXUTWqMfIQTU9pIKUFKTZiDUhJLLTudn+deTQivjsWFqRN/qup1E9SQ4c4JIyS+0Aed4Y0yKgnHEepdv1hWQEBXN0pAA/CTfc/1blFgtYSh6XuOrRfqRWM72zszi1iDfYCsjnwkfqpMbp3Gzjd2wzXp7xq/wLpd/fT1iilBCb2TxKPm6f8AbGySZxWoJUXBuKYD4jLPzprh42POmpWkpSXJsGOC+Yqu2eyUz9LP08xkiajaCasoVSqnJW0+UWXcbON3bDNenvGfzfy7fN39OUQt8nTpSkKUhYKVJUUqBwpJYj1BiSDG+fxg+H+41ffoH2c/7xagmpA3eoZXid0aAgxpKQqYe0lTesJbaQxoxQtfECTQ0tSSW5cjEtSAyG8fO0TkLcMb4rnl4GmYmEbmoQQfNssRFS9pygendKkkg1+cXKFbg2cQmos4Bpjw9c2jJM9jWo/aFl2nlroefIJZO4VPkTVk/LPhEkpVLS4LKrXnzFRyhlISXap5C9cg5Z3t84s+zJZloJSAsL50F6X8oe+k8d0REkHTISkBRLHhIoCRxdLA29YqNSvh7s8SQdwc1QauKXuPBi94sZGoXLKlAlSC4UCC4UWKhjNHFneuW9XOkrCFqJIIZNVMMkM/184Uujym501ZS2B6fXtHunkKScB+ZDxb9q9lJZC5LqS/EHchyAk0qxr8oRVqy7gseYcEeIi+WpqMbjryb00sKAQhW1TjaTcL3UUCLV/FyePF6QBCVbWULqKn3Keqk5Nxz5vFjoNMpCQraggcaVEdahi9gKc4U7QnqmLG5IB2gUDOKnrC5UssdYrH4d7P7wnfRPlUuPTDt4RZ63s1AIXKWCwPCGrtYMCDQhxjrzip7P7aVKQE7HYkv1bl7w72b2lLSkq/FUq3WJZ8UDrPPHjCaYcdSB6Je5YUqu24H4yK1rkYhabNUCQoP4kMc0MTm6ohSVoTsY2BJD8w9sCkD1UxShXrYB/GDCzfZZTRvRrlkHfvBq20OCwdjUNEv9esuzF78+rBorUA3+cP6GWCoA2ILh8MT7P5RrccYnG3xDWglFagXINwW6VPh9YgvbMxkhCbYHyAiehQEufr6/eD/DmhOp1O/wDBKZVrq/AP1PlE2+20nWvrZ+yOyzKkolpDsmppVZqs1/MTFtOmpUkpSXJsGOC+Yh3+zgZ2y7Xr7xncbON3bDNenvHPbvtvJroOTNUtQSouDcUwHxBNT9m2yju+bM1+sTnTUqSUpLk2FcF8xDTcD76PbNne3UQjVfxF2AjX6SZKXRSw6F/0rSTtUwxg8wTzj5m1WmXKmLlzElK0KKVJOFCh/wCY+qZ0pS1FSQ4NjTAbMc4/i58Jpnp/1unDzEJ+2SAXXLSKLHNSRfmn+0A1jSrj0swVYbiH08LylQyADFJMy155ivlb3tDktKiAefrTmAIq5ZKDzHhFnptWCzpbkf3EBU8uWTU2yRUeeQY8VpPnYt9CD6daVjhUR5mLFCFNcH+4PD2m47Jo0wUAaDkt2LjLc/P1y0kkEcLOC4SXSoEm71Bq9DaDJlqIoABlqv4XiBktUgnoPH/iGWtGJS+8Ctj7q8LuCQztu+6q1LGhgADuEUySQDZqkGxvb/iKloSeHJd+rO+YbCw+/be5AcE870o3LzMLRV6NYv8AGN1uICrguCAKuMA/4MpvZAVuUlQU5JoGKSalw9B4xPuRMfiCg1GJoehD+QjyUky6lJO00KXcO1DzP1iGV78hb1ql7UnaoXSG4hav7M0eS5Do3GYE3ACwwDkkh3YVPhFkhcqYoEyzuFaBvUeWIc04lgg7VgjmbPe9YBx2pV9mzAyWDFmOCevTEIKkqZSQotucjDpcD9Y3YI4dpAKcEW+VorV6QFW00Jq/Mmh+bQJy/P4qtGS21VWb6aHTpwoULuxDV+hiPNRpdiqfQvBpUxgCKdLXcxO1YS+KiNAw+8flE5aQmoqfauOf+IXXqlFjZ/VsR4nUVy3684uY5DU30enqVtCEglSuEAXJOB9Zjduy9B/pZKUJPEXUs81U54FvKKn4b7O3/bKHEf5aT818rOB5nIjZ9PwPvo9s2d7dREZ5em2GPtOTJStIUoOTcucFsQCTNUtQSouDcUwHxGTpSlqKkhwbGmA2YPOmpWkpSXJsGOC+YzWh3Gzjd2wzXp7xn838u3zd/TlA5M1S1BKi4NxTAfEE1HA2yj3zZmv1gDO/2cDO2Xa9feM7jZxu7YZr094nJkpWkKUHJuXOC2IBJnFaglRcG4pgPiAOKfxH+CO4UvV6VDSCXmIH/ZKUbj/uyf8AaaWaNDQuPqjWICRtADKBCgagizEF6VMcY+PP4dLkg6rRoKpJcrliqpXNScqR4XT4ioqUrGiomJzDMhCLhXlSKtBeCoAzGiV0mWoMUpfxBt9cmiwldpKT99NIpdLNUKBXl/gxaafWEfeS/S/ziSW2m1b1t4RYy1hQrFTL2Ktwn0/xFhJQQOfjAE1kD720jL0+ZiadCmqpZYnD/of+YxqVEATLCjRwRZorZWGE6MNVVbWT1pE0CYmhJV/c/wAjjpHiBMarHq49oN/pVfhJHgS4PncQFpGWtG47h8uXJrQ7KUaFJCkn18iCxPgY13tAqJZSWIzb0gMvUr5mnR/W8CeUjddKupY+X1UQytILc41OTqlKAYkrSb52k1ZrgUjYp+q2y9xvbzMSvGxHVSwVjwFa5YsPQE+XjFVMDEIBBavvWJpnqALqepJUOZwzUx6QmFEA0qfll4cx7K16tTlgaHPhzi9+Hex+9UJkwfZJNn/mEfh/t5+nNs7C+HVTAmZMBTLNQLFbcuSfHOOcdC02mRsTwizACgAFAABQUEPPPU1Dww9153Gzjd2wzXp7xn838u3zd/TlA5E5SlBKi4NxTAfEE1HA2yj3zZmv1jFqzv8AZwM7Zdr194zuNnG7thmvT3icmSlaQpQcm5c4LYgEmcVqCVFwbimA+IAPOmpWkpSXJsGOC+Yhp+B99HtmzvbrGdxs43dsM16e8Z/N/Lt83f05QAOdJUpRUkODY0wGzB501K0lKS5NgxwXzEO/2cDO2Xa9feM7jZxu7YZr094AzT8D76PbNne3WBzpSlqKkhwbGmA2YJ/N/Lt83f05Rnf7OBnbLtevvAHPfjP+HEnUlU7R7Zc4uVIIIlrNyRTgV4ihyHLxyPX9mzJEwyp0tSFpulQq3MYI8Q48Y+nu42cbu2Ga9PeEe1eyJGuTsny0qSmz3BOUkMUmlwYqUtPm2Uhi4P7xZaea4cV843H4g/hjMlqUdJM7xIr3a2SsUdkq+6rz29TGkazTTNPM2Tpa5S+S0lJLZGFDxDiKnZLSXNDWh3TTyBFEnUOlxB5GqwSxgJs8ue4EMoXGty9c2QYaT2gaOwHn+oBEBNhQuMTPPI/WYo0douRtS/iD+lADbnDH/wARW9EdCSHPkIBtbrWFCwI8faKnVSGLhOQC4LcqWgY1MxVaDoB/zBZImPRfv/1Q9JvYemXtUFJ8xmnJvOLiZ9oQp3SUhq+b/XKE9PoSo7UAqVySkv1YWEbV2N8KTFj7RXdpyAxUX+Q+cF68iRQydMVqCEJKlGyU1Pj5eMbT2R8NIACpjKX+FA+6MkqNlFsW6xe6PTy9MClCB4qfiVmpLnPOGu42cbu2Ga9PeJufqLmGmaf7N99HZs2d7dYHPkqUoqSHBsaYDZgn838u3zd/TlGd/s4Gdsu16+8QtOdNStJSkuTYMcF8xDT8D76PbNne3WM7jZxu7YZr094z+b+Xb5u/pygAc6SpSipIcGxpgNmDzpqVpKUlybBjgvmId/s4Gdsu16+8Z3Gzjd2wzXp7wAOTNUtQSouDcUwHxBNT9m2yju+bM1+sTnTUqSUpLk2FcF8xDTcD76PbNne3UQBOTJStIUoOTcucFsQCTNUpQSouDcUwHxGTpSlqKkhwbGmA2YPOnJWkpSXJsGOC+YAhqOBtlHvmzNfqYnJlJUkKUHJua4LYiGm+zffR2bNne3WBzpSlKKkhwbGmA2YAyTNUpQSouDcUwHxBNT9m2yju+bM1+sTnTUqSUpLk2FcF8xDTcD76PbNne3UQBOTJStIUoOTcucFsQmuWmf8AZzkJmIVdK0pKTQ4Igs6UpaipIcGxpgNmDzpyVpKUlybBjgvmANK7a/htoVF5aVySp37tZ24/CvckDwAEUEz+FM1nl6lCwbBctSCK/wBSSp/QR1HTcD76OzZs726wOdKUpRUkODY0wGzD5UrI43M+ANaKIQhZ5IWkf+4UxH/5R10v72kU/wD4ksv6Ljts6alSSlJcmwrgvmIabgffR7Zs726iK51PCONI+Fu0Ffd0qv8AdLA+a4Z0vwbrlltiEPhUxDf/AKyqOsTpSlKKkhwbGmA2YNOmpUkpSXJsGOC+YOd+Fwn1zvT/AADNQ3eT0JfCAVW/u2xs3ZnwfpgkKVvmH8ymFC1kN83i8032b76OzZs726wOdKUpRUkODY0wGzC5VUxkD0MtIZCUpSg/hSkJFA/4QIY1P2bbKO75szX6xOdNSpJSkuTYVwXzENNwPvo9s2d7dREqTkyUrSFKDk3LnBbEAkzVKUEqLg3FMB8Rk6UpaipIcGxpgNmDzpyVpKUlybBjgvmAIajgbZR75szX6mJyZSVJClBybmuC2Ihpvs330dmzZ3t1gc6UpSipIcGxpgNmAMkzVKUEqLg3FMB8QTU/Ztso7vmzNfrE501KklKS5NhXBfMQ03A++j2zZ3t1EATkyUrSFKDk3LnBbEAkzVLUEqLg3FMB8Rk6UpaipIcGxpgNmDzpqVpKUlybBjgvmAP/2Q==')
+}
+
+.bg-planet8 {
+  background-image: url('https://www.nicepng.com/png/detail/374-3747212_endor-endor-star-wars-png.png')
+}
+
+.star {
+  transition-property: top, left;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.star-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.star-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.star-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.star-exit-active {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.planet {
+  transition-property: top, left;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.planet-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.planet-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.planet-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.planet-exit-active {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hover\:bg-yellow-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.focus\:border-yellow-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+
+  .sm\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:items-center {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .lg\:w-3\/6 {
+    width: 50%;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
+  .lg\:p-20 {
+    padding: 5rem;
+  }
+
+  .lg\:text-center {
+    text-align: center;
+  }
+}
