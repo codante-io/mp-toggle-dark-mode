@@ -1,4 +1,13 @@
 import { useState } from 'react'
+import useSound from 'use-sound'
+
+import lightOnAudio from '../assets/audios/lightOn.mp3'
+import lightOffAudio from '../assets/audios/lightOff.mp3'
+import bubbleShotAudio from '../assets/audios/bubbleShot.mp3'
+import blipAudio from '../assets/audios/blip.mp3'
+import chargingAudio from '../assets/audios/charging.mp3'
+import chargeUpAudio from '../assets/audios/chargeUp.mp3'
+import shutDownAudio from '../assets/audios/shutDown.mp3'
 
 enum Toggle {
   white = 'bg-zinc-100',
@@ -13,6 +22,14 @@ enum Toggle {
 type colors = keyof typeof Toggle
 
 export function Home() {
+  const [lightOn] = useSound(lightOnAudio)
+  const [lightOff] = useSound(lightOffAudio)
+  const [bubbleShot] = useSound(bubbleShotAudio)
+  const [blip] = useSound(blipAudio)
+  const [charging] = useSound(chargingAudio)
+  const [shutDown] = useSound(shutDownAudio)
+  const [chargeUp] = useSound(chargeUpAudio)
+
   const [mode, setMode] = useState<colors>(
     () => (localStorage.getItem('theme') as colors) || 'white',
   )
@@ -24,6 +41,30 @@ export function Home() {
     } else {
       setMode(color)
       localStorage.theme = color
+    }
+  }
+
+  function handleSoundLight() {
+    if (mode === 'white') {
+      lightOn()
+    } else {
+      lightOff()
+    }
+  }
+
+  function handleSoundCharging() {
+    if (mode !== 'battery') {
+      charging()
+    } else {
+      shutDown()
+    }
+  }
+
+  function handleSoundChargeUp() {
+    if (mode !== 'planet') {
+      chargeUp()
+    } else {
+      shutDown()
     }
   }
 
@@ -45,7 +86,10 @@ export function Home() {
               className={`w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
                 mode === 'red' ? 'bg-gray-100' : 'bg-gray-700'
               }`}
-              onClick={() => handleToggle('red')}
+              onClick={() => {
+                handleToggle('red')
+                blip()
+              }}
             >
               <div
                 className={`w-5 h-5 rounded-full transition-all duration-500 ${
@@ -59,7 +103,10 @@ export function Home() {
               className={`relative w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
                 mode === 'yellow' ? 'bg-gray-100' : 'bg-gray-700'
               }`}
-              onClick={() => handleToggle('yellow')}
+              onClick={() => {
+                handleToggle('yellow')
+                bubbleShot()
+              }}
             >
               <div
                 className={`absolute w-5 h-5 rounded-full transition-all duration-500 ease-in-out ${
@@ -76,7 +123,10 @@ export function Home() {
                 type="checkbox"
                 id="inputToggle03"
                 className="checked:bg-green-500 appearance-none cursor-pointer w-14 h-7 rounded-full bg-red-500 transition-all duration-500"
-                onClick={() => handleToggle('green')}
+                onClick={() => {
+                  handleToggle('green')
+                  handleSoundLight()
+                }}
                 checked={mode === 'green'}
               />
               <span className="absolute font-medium text-xs uppercase right-1 text-white">
@@ -90,12 +140,13 @@ export function Home() {
 
             {/* // Toggle 04 */}
             <div
-              className={`w-10 h-10 bg-no-repeat cursor-pointer transition-all duration-500 ${
-                mode !== 'white'
-                  ? "bg-[url('/src/assets/batteries/battery0-white.svg')]"
-                  : "bg-[url('/src/assets/batteries/battery0.svg')]"
-              } ${mode === 'battery' && 'animate-battery'}`}
-              onClick={() => handleToggle('battery')}
+              className={`w-10 h-10 bg-no-repeat cursor-pointer transition-all duration-500 bg-[url('/src/assets/batteries/battery0.svg')] ${
+                mode === 'battery' && 'animate-battery'
+              }`}
+              onClick={() => {
+                handleToggle('battery')
+                handleSoundCharging()
+              }}
             ></div>
 
             {/* // Toggle 05 */}
@@ -111,7 +162,10 @@ export function Home() {
               className={`w-8 h-8 bg-no-repeat cursor-pointer transition-all duration-500 bg-[url('/src/assets/planets/planet0.svg')] ${
                 mode === 'planet' && 'animate-planet'
               }`}
-              onClick={() => handleToggle('planet')}
+              onClick={() => {
+                handleToggle('planet')
+                handleSoundChargeUp()
+              }}
             ></div>
           </div>
 
