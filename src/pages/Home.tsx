@@ -5,6 +5,9 @@ enum Toggle {
   red = 'bg-red-500',
   yellow = 'bg-yellow-500',
   green = 'bg-green-500',
+  battery = 'bg-slate-800',
+  user = 'bg-cyan-800',
+  planet = 'bg-purple-900',
 }
 
 type colors = keyof typeof Toggle
@@ -36,7 +39,7 @@ export function Home() {
         >
           <h1 className="font-bold text-lg">Escolha seu toggle</h1>
 
-          <div className="mt-10 flex justify-center gap-4 items-center">
+          <div className="mt-10 flex justify-center gap-8 items-center">
             {/* // Toggle 01 */}
             <div
               className={`w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
@@ -61,7 +64,7 @@ export function Home() {
               <div
                 className={`absolute w-5 h-5 rounded-full transition-all duration-500 ease-in-out ${
                   mode === 'yellow'
-                    ? 'ml-8 bg-transparent top-1 bg-yellow-400'
+                    ? 'ml-8 top-1 bg-yellow-400'
                     : 'bg-transparent ml-1.4 shadow-moon top-0'
                 }`}
               ></div>
@@ -84,6 +87,32 @@ export function Home() {
               </span>
               <span className="w-[1.9rem] h-[1.9rem] right-7 absolute rounded-full transform transition-transform duration-500 bg-gray-200" />
             </label>
+
+            {/* // Toggle 04 */}
+            <div
+              className={`w-10 h-10 bg-no-repeat cursor-pointer transition-all duration-500 ${
+                mode !== 'white'
+                  ? "bg-[url('/src/assets/batteries/battery0-white.svg')]"
+                  : "bg-[url('/src/assets/batteries/battery0.svg')]"
+              } ${mode === 'battery' && 'animate-battery'}`}
+              onClick={() => handleToggle('battery')}
+            ></div>
+
+            {/* // Toggle 05 */}
+            <div
+              className={`w-8 h-8 bg-no-repeat cursor-pointer transition-all duration-500 bg-[url('/src/assets/users/user0.svg')] ${
+                mode === 'user' && 'animate-user'
+              }`}
+              onClick={() => handleToggle('user')}
+            ></div>
+
+            {/* // Toggle 06 */}
+            <div
+              className={`w-8 h-8 bg-no-repeat cursor-pointer transition-all duration-500 bg-[url('/src/assets/planets/planet0.svg')] ${
+                mode === 'planet' && 'animate-planet'
+              }`}
+              onClick={() => handleToggle('planet')}
+            ></div>
           </div>
 
           <section className="mt-20">
