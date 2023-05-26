@@ -6,3 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+input#inputToggle03:checked ~ span:last-child {
+  --tw-translate-x: 1.75rem;
+}

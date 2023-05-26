@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         body: ['JetBrains Mono', 'monospace'],
       },
+      boxShadow: {
+        moon: '4px 3px 0 0 white',
+      },
     },
   },
   plugins: [],

@@ -1,18 +1,20 @@
 import { useState } from 'react'
 
 enum Toggle {
-  white = 'bg-white',
+  white = 'bg-zinc-100',
   red = 'bg-red-500',
   yellow = 'bg-yellow-500',
+  green = 'bg-green-500',
 }
 
+type colors = keyof typeof Toggle
+
 export function Home() {
-  const [mode, setMode] = useState<'white' | 'red' | 'yellow'>(
-    () =>
-      (localStorage.getItem('theme') as 'white' | 'red' | 'yellow') || 'white',
+  const [mode, setMode] = useState<colors>(
+    () => (localStorage.getItem('theme') as colors) || 'white',
   )
 
-  function handleToggle(color: 'white' | 'red' | 'yellow') {
+  function handleToggle(color: colors) {
     if (color === mode) {
       setMode('white')
       localStorage.theme = 'white'
@@ -34,38 +36,54 @@ export function Home() {
         >
           <h1 className="font-bold text-lg">Escolha seu toggle</h1>
 
-          <div className="mt-10 flex justify-between items-center">
+          <div className="mt-10 flex justify-center gap-4 items-center">
             {/* // Toggle 01 */}
             <div
-              className={`relative w-10 rounded-xl h-5 cursor-pointer flex items-center transition-all duration-500 ${
+              className={`w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
                 mode === 'red' ? 'bg-gray-100' : 'bg-gray-700'
               }`}
               onClick={() => handleToggle('red')}
             >
               <div
-                className={`absolute w-3 h-3 rounded-full transition-all duration-500 ${
-                  mode === 'red' ? 'ml-6 bg-gray-700' : 'bg-gray-100 ml-1.5'
+                className={`w-5 h-5 rounded-full transition-all duration-500 ${
+                  mode === 'red' ? 'ml-8 bg-gray-700' : 'bg-gray-100 ml-1.5'
                 }`}
               ></div>
             </div>
 
             {/* // Toggle 02 */}
             <div
-              className={`relative w-10 rounded-xl h-5 cursor-pointer flex items-center transition-all duration-500 ${
+              className={`relative w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
                 mode === 'yellow' ? 'bg-gray-100' : 'bg-gray-700'
               }`}
               onClick={() => handleToggle('yellow')}
             >
               <div
-                className={`absolute w-3 h-3 rounded-full transition-all duration-500 ${
-                  mode === 'yellow' ? 'ml-6 bg-gray-700' : 'bg-gray-100 ml-1.5'
+                className={`absolute w-5 h-5 rounded-full transition-all duration-500 ease-in-out ${
+                  mode === 'yellow'
+                    ? 'ml-8 bg-transparent top-1 bg-yellow-400'
+                    : 'bg-transparent ml-1.4 shadow-moon top-0'
                 }`}
               ></div>
             </div>
 
-            {/* <div className="relative w-10 rounded-xl h-5 cursor-pointer bg-gray-700 dark:bg-gray-100 flex items-center transition-all duration-700">
-              <div className="absolute w-3 h-3 rounded-full bg-gray-100 ml-1.5 dark:ml-6 dark:bg-gray-700 transition-all duration-700"></div>
-            </div> */}
+            {/* // Toggle 03 */}
+            <label className="flex items-center relative w-max cursor-pointer select-none">
+              <input
+                type="checkbox"
+                id="inputToggle03"
+                className="checked:bg-green-500 appearance-none cursor-pointer w-14 h-7 rounded-full bg-red-500 transition-all duration-500"
+                onClick={() => handleToggle('green')}
+                checked={mode === 'green'}
+              />
+              <span className="absolute font-medium text-xs uppercase right-1 text-white">
+                OFF
+              </span>
+              <span className="absolute font-medium text-xs uppercase right-8 text-white">
+                ON
+              </span>
+              <span className="w-[1.9rem] h-[1.9rem] right-7 absolute rounded-full transform transition-transform duration-500 bg-gray-200" />
+            </label>
           </div>
 
           <section className="mt-20">
