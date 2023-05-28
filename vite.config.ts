@@ -14,7 +14,7 @@ export default defineConfig({
         {
           name: 'copy-favicon',
           generateBundle() {
-            fs.copyFileSync('./public/favicon.ico', './dist/favicon.ico')
+            fs.copyFileSync('./public/favicon.png', './dist/favicon.png')
           },
         },
       ],
