@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import useSound from 'use-sound'
+import { useSound } from 'use-sound'
 
 import lightOnAudio from '../assets/audios/lightOn.mp3'
 import lightOffAudio from '../assets/audios/lightOff.mp3'
@@ -8,6 +8,7 @@ import blipAudio from '../assets/audios/blip.mp3'
 import chargingAudio from '../assets/audios/charging.mp3'
 import chargeUpAudio from '../assets/audios/chargeUp.mp3'
 import shutDownAudio from '../assets/audios/shutDown.mp3'
+import sportAudio from '../assets/audios/sport.mp3'
 
 enum Toggle {
   white = 'bg-zinc-100',
@@ -29,6 +30,7 @@ export function Home() {
   const [charging] = useSound(chargingAudio)
   const [shutDown] = useSound(shutDownAudio)
   const [chargeUp] = useSound(chargeUpAudio)
+  const [sport] = useSound(sportAudio)
 
   const [mode, setMode] = useState<colors>(
     () => (localStorage.getItem('theme') as colors) || 'white',
@@ -41,30 +43,6 @@ export function Home() {
     } else {
       setMode(color)
       localStorage.theme = color
-    }
-  }
-
-  function handleSoundLight() {
-    if (mode === 'white') {
-      lightOn()
-    } else {
-      lightOff()
-    }
-  }
-
-  function handleSoundCharging() {
-    if (mode !== 'battery') {
-      charging()
-    } else {
-      shutDown()
-    }
-  }
-
-  function handleSoundChargeUp() {
-    if (mode !== 'planet') {
-      chargeUp()
-    } else {
-      shutDown()
     }
   }
 
@@ -83,7 +61,7 @@ export function Home() {
           <div className="mt-10 flex justify-center gap-8 items-center">
             {/* // Toggle 01 */}
             <div
-              className={`w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
+              className={`select-none w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
                 mode === 'red' ? 'bg-gray-100' : 'bg-gray-700'
               }`}
               onClick={() => {
@@ -100,7 +78,7 @@ export function Home() {
 
             {/* // Toggle 02 */}
             <div
-              className={`relative w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
+              className={`select-none relative w-14 rounded-xl h-7 cursor-pointer flex items-center transition-all duration-500 ${
                 mode === 'yellow' ? 'bg-gray-100' : 'bg-gray-700'
               }`}
               onClick={() => {
@@ -125,14 +103,14 @@ export function Home() {
                 className="checked:bg-green-500 appearance-none cursor-pointer w-14 h-7 rounded-full bg-red-500 transition-all duration-500"
                 onClick={() => {
                   handleToggle('green')
-                  handleSoundLight()
+                  mode === 'white' ? lightOn() : lightOff()
                 }}
                 checked={mode === 'green'}
               />
-              <span className="absolute font-medium text-xs uppercase right-1 text-white">
+              <span className="absolute font-medium text-xs uppercase right-1 text-white select-none">
                 OFF
               </span>
-              <span className="absolute font-medium text-xs uppercase right-8 text-white">
+              <span className="absolute font-medium text-xs uppercase right-8 text-white select-none">
                 ON
               </span>
               <span className="w-[1.9rem] h-[1.9rem] right-7 absolute rounded-full transform transition-transform duration-500 bg-gray-200" />
@@ -145,7 +123,7 @@ export function Home() {
               }`}
               onClick={() => {
                 handleToggle('battery')
-                handleSoundCharging()
+                mode === 'battery' ? shutDown() : charging()
               }}
             ></div>
 
@@ -154,7 +132,10 @@ export function Home() {
               className={`w-8 h-8 bg-no-repeat cursor-pointer transition-all duration-500 bg-[url('/src/assets/users/user0.svg')] ${
                 mode === 'user' && 'animate-user'
               }`}
-              onClick={() => handleToggle('user')}
+              onClick={() => {
+                handleToggle('user')
+                mode === 'user' ? shutDown() : sport()
+              }}
             ></div>
 
             {/* // Toggle 06 */}
@@ -164,7 +145,7 @@ export function Home() {
               }`}
               onClick={() => {
                 handleToggle('planet')
-                handleSoundChargeUp()
+                mode === 'planet' ? shutDown() : chargeUp()
               }}
             ></div>
           </div>
