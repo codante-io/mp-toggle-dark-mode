@@ -61,7 +61,7 @@ export const ThemeSwitcher = () => {
             <Image 
               src={elipse2}
               alt="elipse"
-              className="relative animate-pulse "
+              className="relative"
               width={150}
               height={150}
             /> 
